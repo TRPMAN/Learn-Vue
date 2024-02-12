@@ -5,7 +5,7 @@
   <teleport to="#modals" v-if="showModal">
 
      <Modal  theme="sale" @close="toggleModal">
-        <h1>Take a Rest</h1>
+        <h1>Take a Rest </h1>
         <p>This is a test</p>
      </Modal>
 
