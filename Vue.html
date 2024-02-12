@@ -22,10 +22,10 @@
         border-radius: 10px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content:space-between;
       }
       li.fav{
-        background: #ff9ed2;
+        background: #ff0000;
         color: white;
       }
       img{
@@ -43,7 +43,7 @@
 
       <div v-if ="showBooks"> 
         <ul>
-          <li v-for="book in fb" :class="{ fav: book.isFav}" v-on:click="handlefav(book)" >
+          <li v-for="book in books" :class="{ fav: book.isFav}" v-on:click="handlefav(book)" >
             <img :src="book.img" :alt="book.title">
             <h3>{{book.title}}</h3>
             <p>{{book.author}}</p>

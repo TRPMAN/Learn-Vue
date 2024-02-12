@@ -4,9 +4,9 @@ const app = Vue.createApp({
         urls : 'https://vuejs.org/guide/quick-start.html',
         showBooks: true,
         books: [
-          { title: 'name of the wind', author: 'patrick rothfuss',  img:'asset/1.jpg',isFav : true },
-          { title: 'the way of kings', author: 'brandon sanderson', img:'asset/2.jpg',isFav : false },
-          { title: 'the final empire', author: 'brandon sanderson', img:'asset/3.jpg',isFav : true },
+          { title: 'One Piece', author: 'Gear Second',  img:'asset/1.jpg',isFav : true },
+          { title: 'One Piece', author: 'Gear Forth: Bounceman', img:'asset/2.jpg',isFav : false },
+          { title: 'One Piece', author: 'Gear Forth: Snakeman', img:'asset/3.jpg',isFav : true },
         ],
       }
     },
@@ -21,7 +21,7 @@ const app = Vue.createApp({
     },
     computed:{
         fb(){
-            return this.books.filter((book) => book.isFav)
+            // return this.books.filter((book) => book.isFav)
            
         }
     }
