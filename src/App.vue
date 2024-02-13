@@ -1,7 +1,7 @@
 <template>
 
   <h1>Welcome to My First Vue</h1>
-  <Tiny></Tiny>
+  <!-- <Tiny></Tiny> -->
 
   <teleport to="#modals" v-if="showModal">
 
