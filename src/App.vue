@@ -1,6 +1,7 @@
 <template>
 
   <h1>Welcome to My First Vue</h1>
+  <Tiny></Tiny>
 
   <teleport to="#modals" v-if="showModal">
 
@@ -34,10 +35,11 @@
 <script>
 
 import Modal from './components/Modal.vue'
+import Tiny from './components/Tiny.vue'
 
 export default {
   name: 'App',
-  components: { Modal},
+  components: { Modal,Tiny}, 
 
   data(){
     return{
