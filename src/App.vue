@@ -73,7 +73,6 @@ export default {
   }
   h1 {
     border-bottom: 1px solid #ddd;
-
     padding-bottom: 10px;
   }
   button {
