@@ -2,25 +2,25 @@
 
   <h1>Welcome to My First Vue</h1>
 
-  <teleport to="#modals" v-if="showModal">
+    <teleport to="#modals" v-if="showModal">
 
-     <Modal  theme="sale" @close="toggleModal">
+      <Modal  theme="sale" @close="toggleModal">
+        <template v-slot:links>
         <h1>Take a Rest </h1>
         <p>This is a test</p>
-     </Modal>
+        </template>
+      </Modal>
 
-  </teleport>
+    </teleport>
 
   <div v-if="showModal2">
     
     <Modal  theme="" @close="toggleModal2">
-
       <template v-slot:links>
         <h1>Give Away</h1>
         <a href="#">Sign up now</a>
         <a href="#">more info</a>
       </template>
-
     </Modal>
 
   </div>
@@ -63,6 +63,9 @@ export default {
 </script>
 
 <style>
+  .Modal{
+    display:flex
+  }
   #app, #modals {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
