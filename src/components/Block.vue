@@ -1,6 +1,6 @@
 <template>
     <div class="block" v-if="showBlock">
-        Click me
+        Click me 
     </div>
 </template>
 
