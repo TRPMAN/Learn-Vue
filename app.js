@@ -1,6 +1,6 @@
 const app = Vue.createApp({
     data() {
-      return {
+      return { 
         urls : 'https://vuejs.org/guide/quick-start.html',
         showBooks: true,
         books: [
