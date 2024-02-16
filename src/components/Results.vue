@@ -1,7 +1,7 @@
 <template>
     <p>Reaction Time : {{score}} ms</p>
     <p class="rank">{{rank}}</p>
-</template>
+</template> 
 
 <script>
 export default {

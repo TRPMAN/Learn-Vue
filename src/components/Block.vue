@@ -11,7 +11,7 @@ export default {
         return{
             showBlock : false,
             timer : null,
-            reactionTime : 0
+            reactionTime : 0 
         }
     },
 

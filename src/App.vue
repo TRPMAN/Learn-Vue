@@ -3,7 +3,7 @@
   <button @click="start" :disabled="isPlaying">Play</button>
   <Results v-if="showResult" :score="score" :showResults="results"></Results>
   <Block v-if="isPlaying" :delay="delay" @end="endGame"></Block>
-</template>
+</template> 
 
 <script>
 import Block from './components/Block.vue'
