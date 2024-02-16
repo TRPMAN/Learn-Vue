@@ -8,7 +8,7 @@
     <div v-if="passwordError" class="error">
         {{passwordError}}
     </div>
-
+ 
     <label>Role :</label>
     <select v-model="role">
         <option value="developer">Web Developer</option>
