@@ -53,7 +53,7 @@ export default {
     padding: 8px 14px;
     letter-spacing: 1px;
     cursor: pointer;
-    margin : 10px;
+    margin : 11px;
   }
   button[disabled]{
     opacity: 0.2;
