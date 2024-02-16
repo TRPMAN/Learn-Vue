@@ -6,7 +6,7 @@
 import SignupFrom from './components/SignupForm.vue'
 
 export default {
-  name: 'App',
+  name: 'App', 
   components: {SignupFrom}
 } 
 </script>
