@@ -1,5 +1,4 @@
-# vuespecial2
-
+# This is a Vue Sign up Form
 ## Project setup
 ```
 npm install
