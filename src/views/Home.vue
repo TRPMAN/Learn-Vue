@@ -1,32 +1,44 @@
 <template>
   <div class="home">
-    <h1>Home</h1>
-    <p>My name is {{ name }} and my age is {{ age }}</p>
-    <button @click="handleClick">click me</button>
-    <button @click="age++">Add 1 Age</button>
-    <input type="text" v-model="name">
+    <div v-if="error">{{ error }}</div>
+    <div v-if="posts.length">
+      <PostList :posts="posts" />
+    </div>
+    <div v-else>Loading...</div>
   </div>
 </template>
 
 <script>
 import { ref } from 'vue'
 
+// component imports
+import PostList from '../components/PostList.vue'
+
 export default {
   name: 'Home',
-  setup() {
+  components: { PostList },
+  setup() { 
+    const posts = ref([])
+    const error = ref(null)
 
-    const name = ref('mario')
-    const age = ref(30)
-
-    const handleClick = () => {
-      name.value = 'MAN'
-      age.value = 300
+    const load = async () => {
+      try {
+        let data = await fetch('http://localhost:3000/posts')
+        if(!data.ok) {
+          throw Error('no available data')
+        }
+        posts.value = await data.json()
+        console.log(posts.value)
+      }
+      catch(err) {
+        error.value = err.message
+        console.log(error.value)
+      }
     }
 
-    return { name, age, handleClick }
+    load()
+    
+    return { posts, error }
   },
-  mounted() {
-    console.log('mounted')
-  }
 }
 </script>
